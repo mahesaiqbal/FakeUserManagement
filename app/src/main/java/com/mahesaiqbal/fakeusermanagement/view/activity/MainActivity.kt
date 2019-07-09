@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.*
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mahesaiqbal.fakeusermanagement.R
 import com.mahesaiqbal.fakeusermanagement.databinding.ActivityMainBinding
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
     }
 
     private fun setupRecyclerView() {
-        val layoutManager = LinearLayoutManager(this)
+        val layoutManager = GridLayoutManager(this, 2)
         binding.rvUser.layoutManager = layoutManager
         adapter = UsersAdapter(this)
         binding.rvUser.adapter = adapter

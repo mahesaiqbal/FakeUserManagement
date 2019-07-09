@@ -15,7 +15,7 @@ class UserViewModel(model: Data): ViewModel() {
     init {
         id.set(model.id)
         email.set(model.email)
-        firstName.set(model.firstName)
+        firstName.set(model.firstName + " ")
         lastName.set(model.lastName)
         avatar.set(model.avatar)
     }
