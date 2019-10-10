@@ -24,8 +24,6 @@ class MainRepository {
                 override fun onApiError(er: Throwable) {
                     onError(er)
                 }
-
-
             })
     }
 
